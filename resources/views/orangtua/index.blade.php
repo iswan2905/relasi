@@ -5,7 +5,7 @@
 	<center><h1>Data Orang Tua</h1></center>
 	<div class="panel panel-primary">
 		<div class="panel-heading">Data Orang Tua
-		<div class="panel-title pull right"><a href="/orangtua/create">Tambah Data</a></div>
+		<div class="panel-title pull-right"><a href="/orangtua/create">Tambah Data</a></div>
 		</div>
 
 		<div class="panel-body">
@@ -26,8 +26,8 @@
 					<tr>
 						<td>{{$data->nama_ayah}}</td>
 						<td>{{$data->nama_ibu}}</td>
-						<td>{{$data->umur_ayah}}</td>
-						<td>{{$data->umur_ibu}}</td>
+						<td>{{$data->umur_ayah}} Tahun</td>
+						<td>{{$data->umur_ibu}} Tahun</td>
 						<td>{{$data->alamat}}</td>
 						<td>
 							@foreach($data->anak as $a)
