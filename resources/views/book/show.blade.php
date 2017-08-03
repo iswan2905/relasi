@@ -8,16 +8,14 @@
 		<a href="{{URL::previous() }}">Kembali</a></div>
 		</div>
 		<div class="panel-body">
-			<form action="{{route('book.update', $book->id)}}" method="POST">
-				<input type="hidden" name="_method" value="PUT">
-				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+			
 				<div class="form-group">
 					<label class="control-lable">Title</label>
 					<input type="text" name="a" value="{{$book->title}}" class="form-control" readonly="">
 				</div>
 				<div class="form-group">
 					<label class="control-lable">Author</label>
-						<input type="text" name="a" value="{{$book->author->name}}" class="form-control" readonly="">
+						<input type="text" name="b" value="{{$book->author->name}}" class="form-control" readonly="">
 				</div>
 				<div class="form-group">
 					<label class="control-lable">Amount</label>
@@ -25,7 +23,7 @@
 				</div>
 				<div class="form-group">
 					<label class="control-lable">Cover</label>
-					<input type="text" name="d" value="{{$book->cover}}" class="form-control" readonly="">
+					<img src="{{asset('/img/'.$book->cover.'')}}" width="90" height="120" name="cover">
 				</div>
 			</form>
 		</div>
